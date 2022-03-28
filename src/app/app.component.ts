@@ -1,11 +1,11 @@
-import { Component } from "@angular/core";
-import { AlertController } from "@ionic/angular";
-import { ApiService } from "./api/api.service";
-import { SongResponse } from "./song/song.model";
+import { Component } from '@angular/core';
+import { AlertController } from '@ionic/angular';
+import { ApiService } from './api/api.service';
+import { SongResponse } from './song/song.model';
 @Component({
-  selector: "my-app",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.scss"]
+  selector: 'my-app',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   /* ******** INTRUCTIONS **************
@@ -25,16 +25,4 @@ export class AppComponent {
   */
 
   constructor(private api: ApiService) {}
-
-  ngAfterViewInit(): void {
-    const artist = "Shakira";
-    const media = "musicVideo"; // Or movie
-    this.api.searchSongs(artist, media).subscribe(
-      (data: SongResponse) => {
-        console.log("Data", data);
-        console.log("Data", data.results[0]);
-      },
-      error => {}
-    );
-  }
 }
