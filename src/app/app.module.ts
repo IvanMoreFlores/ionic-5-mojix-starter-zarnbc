@@ -1,14 +1,14 @@
-import { NgModule } from "@angular/core";
-import { BrowserModule } from "@angular/platform-browser";
-import { FormsModule } from "@angular/forms";
-import { IonicModule } from "@ionic/angular";
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { IonicModule } from '@ionic/angular';
 
-import { AppComponent } from "./app.component";
-import { HelloComponent } from "./hello.component";
-import { ApiService } from "./api/api.service";
-import { SongComponent } from "./song/song.component";
-import { HttpClientModule } from "@angular/common/http";
-import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from './app.component';
+import { HelloComponent } from './hello.component';
+import { ApiService } from './api/api.service';
+import { SongComponent } from './song/song.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   imports: [
@@ -16,10 +16,11 @@ import { AppRoutingModule } from "./app-routing.module";
     FormsModule,
     IonicModule.forRoot(),
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
-  declarations: [AppComponent, ],
+  declarations: [AppComponent, SongComponent],
   bootstrap: [AppComponent],
-  providers: [ApiService]
+  providers: [ApiService],
+  entryComponents: [SongComponent],
 })
 export class AppModule {}

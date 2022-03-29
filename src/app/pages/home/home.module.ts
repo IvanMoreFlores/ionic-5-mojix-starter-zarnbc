@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { ApiService } from '../../api/api.service';
-import { SongModule } from '../../song/song.module';
 import { HomeComponent } from './home.component';
 
 const routes: Routes = [
@@ -20,7 +19,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes),
     CommonModule,
-    SongModule,
   ],
   providers: [ApiService],
   exports: [HomeComponent],
